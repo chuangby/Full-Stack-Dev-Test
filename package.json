@@ -1,0 +1,12 @@
+{
+  "name": "field-estimate-tool",
+  "version": "1.0.0",
+  "description": "On-site HVAC estimate tool — dev test submission",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

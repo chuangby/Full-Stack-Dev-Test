@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Field Estimate Tool</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="app-header">
+  <div class="brand">
+    <span class="brand-mark">FE</span>
+    <div class="brand-text">
+      <h1>Field Estimate Tool</h1>
+      <p>On-site pricing, built for the truck &mdash; not the office.</p>
+    </div>
+  </div>
+</header>
+
+<main class="layout">
+
+  <section class="panel form-panel">
+    <h2 class="panel-title"><span class="step-num">1</span> Customer</h2>
+    <select id="customerSelect">
+      <option value="">Select a customer&hellip;</option>
+    </select>
+    <div id="customerDetails" class="customer-details empty">Pick a customer to see property details.</div>
+
+    <h2 class="panel-title"><span class="step-num">2</span> Job type</h2>
+    <select id="jobTypeSelect">
+      <option value="">Select a job type&hellip;</option>
+    </select>
+
+    <h2 class="panel-title"><span class="step-num">3</span> Scope / level</h2>
+    <select id="levelSelect" disabled>
+      <option value="">Select job type first&hellip;</option>
+    </select>
+
+    <h2 class="panel-title"><span class="step-num">4</span> Equipment <span class="optional">(optional)</span></h2>
+    <input type="text" id="equipmentFilter" placeholder="Filter equipment (e.g. thermostat, Trane)&hellip;" />
+    <div id="equipmentList" class="equipment-list"></div>
+
+    <button id="calculateBtn" disabled>Calculate estimate</button>
+    <p id="formError" class="form-error" hidden></p>
+  </section>
+
+  <section class="panel ticket-panel">
+    <div id="ticket" class="ticket empty-state">
+      <div class="empty-icon">&#128203;</div>
+      <p>Fill out the form to generate a customer-ready estimate.</p>
+    </div>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
